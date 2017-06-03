@@ -22,10 +22,16 @@ public class HafmanovoStablo {
 		return 1+Integer.max(visinaStabla(k.levo), visinaStabla(k.desno));
 	}
 	
-	public static boolean balansirano(Cvor k){
+	public static boolean balansirano(Cvor k,int visina){
 		if(k==null)
 			return true;
-		return Math.abs(visinaStabla(k.levo)-visinaStabla(k.desno))<2;
+		if(k.levo==null && k.desno==null){
+			if(((visina-visinaStabla(k)+1)==(visina-1)) || visinaStabla(k)==1)
+				return true;
+			else
+				return false;
+		}
+		return balansirano(k.levo,visina) && balansirano(k.desno,visina);
 	}
 	
 	private static int brojCvorova(Cvor k){

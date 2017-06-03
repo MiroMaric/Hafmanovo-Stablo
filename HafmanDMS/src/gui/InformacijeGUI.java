@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import java.awt.SystemColor;
 import java.awt.Font;
 import java.awt.Color;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -38,7 +40,8 @@ public class InformacijeGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public InformacijeGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(InformacijeGUI.class.getResource("/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Text-Color-Black.png")));
+		ImageIcon img = new ImageIcon("icons/ah.jpg");
+		setIconImage(img.getImage());
 		setResizable(false);
 		setTitle("Informacije o stablu");
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -104,7 +107,7 @@ public class InformacijeGUI extends JFrame {
 			textFieldBalansirano.setBounds(145, 89, 288, 25);
 			textFieldBalansirano.setColumns(10);
 			textFieldBalansirano.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-			textFieldBalansirano.setText((HafmanovoStablo.balansirano(GUIKontroler.koren)==true?"DA":"NE")+"");
+			textFieldBalansirano.setText((HafmanovoStablo.balansirano(GUIKontroler.koren,HafmanovoStablo.visinaStabla(GUIKontroler.koren))==true?"DA":"NE")+"");
 		}
 		return textFieldBalansirano;
 	}

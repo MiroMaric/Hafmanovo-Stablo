@@ -54,7 +54,8 @@ public class HafmanGUI extends JFrame {
 	private JButton button;
 	
 	public HafmanGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(HafmanGUI.class.getResource("/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Text-Color-Black.png")));
+		ImageIcon img = new ImageIcon("icons/ah.jpg");
+		setIconImage(img.getImage());
 		setResizable(false);
 		setTitle("Hafmanovo stablo");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -322,8 +323,8 @@ public class HafmanGUI extends JFrame {
 	}
 	private JButton getBtnNewButton() {
 		if (btnNewButton == null) {
-			btnNewButton = new JButton("");
-			btnNewButton.setIcon(new ImageIcon(HafmanGUI.class.getResource("/com/sun/java/swing/plaf/windows/icons/Question.gif")));
+			btnNewButton = new JButton("!");
+			btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 			btnNewButton.setToolTipText("O projektu");
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {

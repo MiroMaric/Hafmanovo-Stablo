@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -26,7 +27,8 @@ public class KodiranjeGUI extends JFrame {
 	private JButton btnIzlaz;
 
 	public KodiranjeGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(KodiranjeGUI.class.getResource("/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Text-Color-Black.png")));
+		ImageIcon img = new ImageIcon("icons/ah.jpg");
+		setIconImage(img.getImage());
 		setResizable(false);
 		setTitle("Kodiranje re\u010Di");
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

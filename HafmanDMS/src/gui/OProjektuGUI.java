@@ -11,6 +11,7 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -24,7 +25,8 @@ public class OProjektuGUI extends JFrame {
 	private JButton btnIzlaz;
 	
 	public OProjektuGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(OProjektuGUI.class.getResource("/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Text-Color-Black.png")));
+		ImageIcon img = new ImageIcon("icons/ah.jpg");
+		setIconImage(img.getImage());
 		setTitle("O projektu");
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

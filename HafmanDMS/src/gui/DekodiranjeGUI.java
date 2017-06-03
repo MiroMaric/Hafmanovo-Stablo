@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -25,7 +27,8 @@ public class DekodiranjeGUI extends JFrame {
 	private JButton btnIzlaz;
 
 	public DekodiranjeGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(DekodiranjeGUI.class.getResource("/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Text-Color-Black.png")));
+		ImageIcon img = new ImageIcon("icons/ah.jpg");
+		setIconImage(img.getImage());
 		setResizable(false);
 		setTitle("Dekodiranje koda");
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
